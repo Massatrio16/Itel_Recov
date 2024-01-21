@@ -6,7 +6,7 @@
 #
 
 
-DEVICE_PATH := device/itel/S665L
+
 
 LOCAL_PATH := device/itel/S665L
 # A/B
@@ -18,8 +18,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -28,6 +27,15 @@ PRODUCT_PACKAGES += \
 TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_drm.ko sprd_audcp_boot.ko  fpsensor_fp.ko sprd_sensor.ko aw32257_charger.ko charger-manager.ko tran_charger.ko musb_hdrc.ko musb_sprd.ko"
 
  
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery
+
+PRODUCT_PACKAGES += \
+    bootctrl \
+    bootctrl.recovery 
+
 
 PRODUCT_PACKAGES += \
     bootctrl.ums9230
