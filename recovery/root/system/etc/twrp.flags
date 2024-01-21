@@ -1,7 +1,7 @@
 # mount point       fstype    device                                                                flags
 
 ## User-writable / Storage partitions
-/boot_a			        emmc	/dev/block/by-name/boot_a			flags=display="boot";backup=1;flashimg=1;slotselect
+/boot			        emmc	/dev/block/by-name/boot			flags=display="boot";backup=1;flashimg=1;slotselect
 /dtbo			        emmc 	/dev/block/by-name/dtbo 		        flags=display="dtbo";backup=1;flashimg=1;slotselect
 /dtb			        emmc 	/dev/block/by-name/dtb 		        flags=display="dtbo";backup=1;flashimg=1;slotselect
 /vendor_boot        emmc      /dev/block/by-name/vendor_boot                    flags=display="Vendor Boot";flashimg=1;backup=1;slotselect
