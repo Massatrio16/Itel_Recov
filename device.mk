@@ -29,8 +29,8 @@ TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_
  
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery
+    android.hardware.boot@1.0-impl \
+    android.hardware.boot@1.0-impl.recovery
 
 PRODUCT_PACKAGES += \
     bootctrl \
