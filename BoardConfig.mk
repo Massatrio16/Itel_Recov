@@ -25,7 +25,7 @@ TARGET_USES_UEFI := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := S665L
 
-
+TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
 
 
 
