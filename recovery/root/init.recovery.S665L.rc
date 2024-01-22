@@ -17,13 +17,13 @@ service keystore2 /system/bin/keystore2 /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-service keymint-1-0 /vendor/bin/hw/android.hardware.security.keymint@1.0-unisoc.service
+service keymint-1-0 /system/bin/android.hardware.security.keymint@1.0-unisoc.service
     class early_hal
     user root
     group root drmrpc
 seclabel u:r:recovery:s0
 
-service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service.trusty
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.trusty
     user root
     group root
     disabled
