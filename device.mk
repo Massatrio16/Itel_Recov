@@ -27,15 +27,12 @@ TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-android.hardware.boot@1.2-impl-default.recovery \
-android.hardware.boot@1.2-impl-default
-
+    android.hardware.boot@1.2-impl.recovery 
 
 
 PRODUCT_PACKAGES += \
-    bootctrl.ums9230.recovery \
-bootctrl.ums9230
+    unisoc.bootctrl.recovery \
+unisoc.bootctrl
     
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -44,7 +41,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 PRODUCT_PACKAGES_DEBUG += \
-    bootctrl.ums9230
+    bootctrl.default
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
