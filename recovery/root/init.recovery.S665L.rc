@@ -1,19 +1,10 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
 
-service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
-    class main
+
+service keystore2 /system/bin/keystore2 /data/misc/keystore
     user root
-    group root system
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
-
-
-service keystore2 /system/bin/keystore2 /tmp/misc/keystore
-    user root
-    group root drmrpc readproc log
+    group root
     disabled
     seclabel u:r:recovery:s0
 
@@ -56,6 +47,6 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
 
 on boot
-start boot-hal-1-0
+
     start health-hal-2-1
 
