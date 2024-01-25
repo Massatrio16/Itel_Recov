@@ -19,8 +19,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-default \
-    android.hardware.health@2.1-service \
-    libhealthd.$(PRODUCT_PLATFORM)
+    android.hardware.health@2.1-service 
+    
 TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_drm.ko sprd_audcp_boot.ko  fpsensor_fp.ko sprd_sensor.ko aw32257_charger.ko charger-manager.ko tran_charger.ko musb_hdrc.ko musb_sprd.ko"
 
  
@@ -32,7 +32,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     unisoc.bootctrl.recovery \
-unisoc.bootctrl
+unisoc.bootctrl \
+bootctrl.default
     
 ENABLE_VIRTUAL_AB := true
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -41,7 +42,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 PRODUCT_PACKAGES_DEBUG += \
-    bootctrl.default
+  unisoc.bootctrl
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
