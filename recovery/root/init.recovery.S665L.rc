@@ -48,5 +48,5 @@ on property:twrp.decrypt.done=true
 
 on boot
 
-    start health-hal-2-1
+    start health-hal-2-0
 
