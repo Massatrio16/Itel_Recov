@@ -18,16 +18,16 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-default \
-    android.hardware.health@2.1-service 
+    android.hardware.health@2.0-impl-default \
+    android.hardware.health@2.0-service 
     
 TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_drm.ko sprd_audcp_boot.ko  fpsensor_fp.ko sprd_sensor.ko aw32257_charger.ko charger-manager.ko tran_charger.ko musb_hdrc.ko musb_sprd.ko"
 
  
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery 
+    android.hardware.boot@1.0-impl-1.2 \
+    android.hardware.boot@1.0-impl-1.2.recovery 
 
 
 PRODUCT_PACKAGES += \
@@ -64,5 +64,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.1-impl-mock \
+android.hardware.fastboot@1.1-impl \
     fastbootd
