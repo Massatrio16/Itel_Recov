@@ -47,6 +47,6 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
 
 on boot
-
+start vendor.sprd.boot-hal-1-2
     start health-hal-2-0
 
