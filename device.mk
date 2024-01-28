@@ -39,7 +39,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 
 
 PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+    update_engine_client \
+unisoc.bootctrl
+
+
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
