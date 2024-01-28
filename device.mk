@@ -27,11 +27,10 @@ TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl-1.2 \
-    android.hardware.boot@1.0-impl-1.2.recovery \
+     vendor.sprd.hardware.boot@1.2-service \
 vendor.sprd.hardware.boot@1.2
 
 PRODUCT_PACKAGES += \
-    unisoc.bootctrl.recovery \
 unisoc.bootctrl \
 bootctrl.default
     
@@ -41,8 +40,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-PRODUCT_PACKAGES_DEBUG += \
-  unisoc.bootctrl
+
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
