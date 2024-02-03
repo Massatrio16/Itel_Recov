@@ -21,7 +21,7 @@ cc_library {
 }
 
 cc_library_shared {
-    name: "android.hardware.boot@1.0-impl-1.2",
+    name: "android.hardware.boot@1.0-impl",
     stem: "android.hardware.boot@1.0-impl-1.2",
     defaults: ["vendor.sprd.hardware.boot@1.2"],
     static_libs: ["libgptutils.taoyao"],
