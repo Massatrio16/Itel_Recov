@@ -15,11 +15,10 @@
 //
 
 cc_library_shared {
-    name: "android.hardware.boot@1.0-impl-1.2",
-    stem: "vendor.sprd.boot@1.2",
+    name: "android.hardware.boot@1.0",
+    stem: "android.hardware.boot@1.0-impl-1.2"",
     defaults: [
         "bootctrl.default",
-"face.default",
     ],
     relative_install_path: "hw",
     vendor: true,
@@ -37,7 +36,7 @@ cc_library_shared {
 "android.hardware.boot@1.2",
         "libhwbinder",
         "libutils",
-        "vendor.sprd.boot@1.2",
+        "vendor.sprd.hardware.boot@1.2",
 "libturboctl_vendor",
 "libsprdfd_hw"
         
