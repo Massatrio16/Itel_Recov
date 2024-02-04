@@ -14,35 +14,17 @@
 // limitations under the License.
 //
 
-cc_library_shared {
-    name: "android.hardware.boot@1.0",
-    stem: "android.hardware.boot@1.0-impl-1.2"",
-    defaults: [
-        "bootctrl.default",
-    ],
-    relative_install_path: "hw",
-    vendor: true,
-    recovery_available: true,
-    srcs: ["BootControl.cpp", "boot_region_control.cpp"],
-    cppflags: ["-Wno-unused-variable"],
-    cflags: ["-Wno-unused-variable"],
-    header_libs: ["device_kernel_headers"],
 
-    shared_libs: [
-        "liblog",
-        "libhidlbase",
-"android.hardware.boot@1.0",
-"android.hardware.boot@1.1",
-"android.hardware.boot@1.2",
-        "libhwbinder",
-        "libutils",
-        "vendor.sprd.hardware.boot@1.2",
-"libturboctl_vendor",
-"libsprdfd_hw"
-        
-    ],
-    static_libs: [
-        "libkernelbootcp.trusty",
-        "unisoc.bootctrl",
-    ],
+
+cc_library {
+    name: "bootctrl.default",
+    defaults: ["bootctrl_hal_defaults"],
+    static_libs: ["unisoc.bootctrl"],
+}
+
+cc_library_shared {
+    name: "android.hardware.boot@1.0-impl-1.2",
+    stem: "vendor.sprd.hardware.boot@1.2",
+    defaults: ["vendor.sprd.hardware.boot@1.2_defaults"],
+    static_libs: ["unisoc.bootctrl"],
 }
