@@ -18,8 +18,8 @@ cc_library_shared {
     name: "android.hardware.boot@1.0-impl-1.2",
     stem: "vendor.sprd.boot@1.2",
     defaults: [
-        "hidl_defaults",
-        "libboot_control_defaults",
+        "bootctrl.default",
+"face.default",
     ],
     relative_install_path: "hw",
     vendor: true,
@@ -32,13 +32,18 @@ cc_library_shared {
     shared_libs: [
         "liblog",
         "libhidlbase",
-        "libhardware",
+"android.hardware.boot@1.0",
+"android.hardware.boot@1.1",
+"android.hardware.boot@1.2",
+        "libhwbinder",
         "libutils",
-        "vendor.sprd.boot@1.2"
+        "vendor.sprd.boot@1.2",
+"libturboctl_vendor",
+"libsprdfd_hw"
         
     ],
     static_libs: [
-        "libboot_control",
-        "libfstab",
+        "libkernelbootcp.trusty",
+        "unisoc.bootctrl",
     ],
 }
