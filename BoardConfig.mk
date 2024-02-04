@@ -5,13 +5,18 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/X6833B
+DEVICE_PATH := device/itel/S665L
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Relax ELF prebuilts in PRODUCT_COPY_FILES rule
 # https://android.googlesource.com/platform/build/+/refs/heads/main/Changes.md#elf-prebuilts-in-build_broken_elf_prebuilt_product_copy_files
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+TARGET_OTA_ASSERT_DEVICE := S665L
+
+TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/lib/modules)\")
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
@@ -66,7 +71,7 @@ BOARD_RAMDISK_OFFSET := 0x05400000
 BOARD_DTB_SIZE := 199900
 BOARD_DTB_OFFSET := 0x01f00000
 BOARD_VENDOR_BASE := 0x00000000
-BOARD_VENDOR_CMDLINE := bootopt=64S3,32N2,64N2
+BOARD_VENDOR_CMDLINE :=  console=ttyS1,115200n8 buildvariant=user
 
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline $(BOARD_VENDOR_CMDLINE)
