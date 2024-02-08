@@ -24,7 +24,7 @@ cc_library {
 
 cc_library_shared {
     name: "android.hardware.boot@1.0-impl-1.2",
-    stem: "android.hardware.boot@1.2",
+    stem: "vendor.sprd.hardware.boot@1.2",
     defaults: ["vendor.sprd.hardware.boot@1.2"],
     static_libs: ["bootctrl.default"],
 }
