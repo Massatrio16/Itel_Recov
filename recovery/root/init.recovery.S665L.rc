@@ -20,8 +20,11 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service.trust
     disabled
     seclabel u:r:recovery:s0
 
+service vendor-boot-hal-1-2 /system/bin/vendor.sprd.hardware.boot@1.2-service
+    user root
+    group root
+seclabel u:r:recovery:s0
 
-    
 on property:vendor.sys.listener.registered=true
     start keymint-1-0
     start gatekeeper-1-0
@@ -49,6 +52,7 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
 
 on boot
-start boot-hal-1-2
+start boot-hal-1-0
+start vendor-boot-hal-1-2
     start health-hal-2-1
 
