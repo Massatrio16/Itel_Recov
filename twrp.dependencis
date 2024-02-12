@@ -3,6 +3,6 @@
     "remote": "Massatrio16",
     "repository": "Itel_Recov",
     "target_path": "device/itel/S665L",
-    "branch": "android-12.1"
+    "branch": "android-12"
   }
 ]
