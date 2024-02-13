@@ -52,9 +52,6 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
 
 on boot
-start boot-hal-1-0
 start boot-hal-1-2
-start ven-boot-hal-1-2
-start vendor-boot-hal-1-2
     start health-hal-2-1
 
