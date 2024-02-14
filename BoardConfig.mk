@@ -122,6 +122,14 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # Verified Boot
 BOARD_AVB_ENABLE := true
 
+
+
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+$(TARGET_OUT_SHARED_LIBRARIES)/vendor.sprd.hardware.boot@1.2.so \
+
+
+
+
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
