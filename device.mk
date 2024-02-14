@@ -30,8 +30,9 @@ TW_LOAD_VENDOR_MODULES := "goodix_fp.ko  modules.load modules.load.recovery msm_
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl-1.2 \
-     vendor.sprd.hardware.boot@1.2-service \
-vendor.sprd.hardware.boot@1.2
+     vendor.sprd.hardware.boot@1.2-service.rc \
+vendor.sprd.hardware.boot@1.2.so \
+vendor.sprd.hardware.boot@1.2-service \
 
 PRODUCT_PACKAGES += \
 unisoc.bootctrl \
